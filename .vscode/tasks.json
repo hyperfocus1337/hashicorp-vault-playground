@@ -1,0 +1,25 @@
+{
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "terraform init",
+      "type": "shell",
+      "command": "terraform init"
+    },
+    {
+      "label": "terraform validate",
+      "type": "shell",
+      "command": "terraform validate",
+      "dependsOn": "terraform init",
+      "problemMatcher": []
+    },
+    {
+      "label": "docker-compose up",
+      "type": "shell",
+      "command": "export VAULT_LICENSE=$(cat vault_license) && docker-compose up",
+      "problemMatcher": []
+    }
+  ]
+}

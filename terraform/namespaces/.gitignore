@@ -1,0 +1,12 @@
+.DS_Store
+.idea
+*.log
+tmp/
+
+.terraform
+.terraform.lock.hcl
+tfstate/.terraform.tfstate.lock
+tfstate/terraform.tfstate
+tfstate/terraform.tfstate.backup
+
+token.tfvars
